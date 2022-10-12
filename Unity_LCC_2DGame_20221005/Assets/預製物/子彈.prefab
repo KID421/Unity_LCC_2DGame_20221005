@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 277844437617787241}
   - component: {fileID: -7835977114090352908}
   - component: {fileID: 5657604842401456746}
+  - component: {fileID: 8905100435589338172}
   m_Layer: 0
   m_Name: "\u5B50\u5F48"
-  m_TagString: Untagged
+  m_TagString: "\u5B50\u5F48"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,7 +128,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &5657604842401456746
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,9 +139,20 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1.35, y: 0.45}
   m_Direction: 1
+--- !u!247 &8905100435589338172
+ConstantForce2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277844437617787240}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 0}
+  m_RelativeForce: {x: 0, y: 0}
+  m_Torque: 0

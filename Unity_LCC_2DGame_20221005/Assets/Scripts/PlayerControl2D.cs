@@ -1,16 +1,16 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 namespace KID
 {
     /// <summary>
-    /// ª±®a±±¨î¾¹ 2D ¼Ò¦¡
+    /// ç©å®¶æ§åˆ¶å™¨ 2D æ¨¡å¼
     /// </summary>
     public class PlayerControl2D : MonoBehaviour
     {
-        #region ¸ê®Æ¡GÄæ¦ì Field - ÅÜ¼Æ
-        [SerializeField, Header("²¾°Ê³t«×"), Range(0, 50)]
+        #region è³‡æ–™ï¼šæ¬„ä½ Field - è®Šæ•¸
+        [SerializeField, Header("ç§»å‹•é€Ÿåº¦"), Range(0, 50)]
         private float speed = 3.5f;
-        [Header("¹Ï¤ù¡G¤W¤¤¤U")]
+        [Header("åœ–ç‰‡ï¼šä¸Šä¸­ä¸‹")]
         [SerializeField]
         private Sprite spriteUp;
         [SerializeField]
@@ -22,7 +22,7 @@ namespace KID
         private Rigidbody2D rig;
         #endregion
 
-        #region ¨Æ¥ó
+        #region äº‹ä»¶
         private void Awake()
         {
             spr = GetComponent<SpriteRenderer>();
@@ -35,14 +35,14 @@ namespace KID
         }
         #endregion
 
-        #region ¤èªk
+        #region æ–¹æ³•
         /// <summary>
-        /// ²¾°Ê
+        /// ç§»å‹•
         /// </summary>
         private void Move()
         {
-            float h = Input.GetAxis("Horizontal");  // A D ¡ö ¡÷
-            float v = Input.GetAxis("Vertical");    // W S ¡ô ¡õ
+            float h = Input.GetAxis("Horizontal");  // A D â† â†’
+            float v = Input.GetAxis("Vertical");    // W S â†‘ â†“
 
             rig.velocity = new Vector2(h, v) * speed;
 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6775123616036351613}
   - component: {fileID: 736849221}
   - component: {fileID: 736849220}
+  - component: {fileID: 2035376957461980020}
   m_Layer: 0
   m_Name: "\u6575\u6A5F"
   m_TagString: Untagged
@@ -144,3 +145,21 @@ CircleCollider2D:
   m_Offset: {x: 0.1, y: 0}
   serializedVersion: 2
   m_Radius: 1
+--- !u!114 &2035376957461980020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775123616036351612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44445ce5a59906a4ca97254e5e86edb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabBullet: {fileID: 277844437617787240, guid: 12a182eaa19c8754d817a89e8201d311, type: 3}
+  posFirePoint: {x: -1, y: 0, z: 0}
+  angleBullet: {x: 0, y: 180, z: 0}
+  v2Force: {x: -100, y: 0}
+  colorBullet: {r: 0.7169812, g: 0.47009614, b: 0.47009614, a: 1}
+  intervalShoot: 1
