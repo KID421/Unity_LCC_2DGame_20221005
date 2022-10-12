@@ -16,7 +16,7 @@ namespace KID
         private ObjectPool<GameObject> objectPool;
         private int index;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             objectPool = new ObjectPool<GameObject>(CreateObjectPool, GetObjectInPool, ReleaseObjectInPool, DestroyObjectInPool, maxSize: countMax);
         }
@@ -33,7 +33,7 @@ namespace KID
         private GameObject CreateObjectPool()
         {
             GameObject tempObject = Instantiate(prefabObject);
-            tempObject.name = prefabObject + " " + (++index);
+            tempObject.name = prefabObject.name + " " + (++index);
             return tempObject;
         }
 

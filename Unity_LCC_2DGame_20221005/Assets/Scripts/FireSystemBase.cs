@@ -17,6 +17,8 @@ namespace KID
         private Vector2 v2Force;
         [SerializeField]
         private Color colorBullet;
+        [SerializeField]
+        private string tagBullet;
 
         private void OnDrawGizmos()
         {
@@ -32,7 +34,13 @@ namespace KID
         {
             Vector3 pos = transform.position +
                 transform.TransformDirection(posFirePoint);
-            GameObject tempBullet = Instantiate(prefabBullet, pos, Quaternion.Euler(angleBullet));
+
+            // GameObject tempBullet = Instantiate(prefabBullet, pos, Quaternion.Euler(angleBullet));
+            // GameObject tempBullet = GameObject.Find("OOO").GetComponent<ObjectPoolBullet>().Get();
+            GameObject tempBullet = ObjectPoolBullet.instance.Get();
+            tempBullet.transform.position = pos;
+            tempBullet.transform.eulerAngles = angleBullet;
+            tempBullet.tag = tagBullet;
             tempBullet.GetComponent<ConstantForce2D>().force = v2Force;
             tempBullet.GetComponent<SpriteRenderer>().color = colorBullet;
         }

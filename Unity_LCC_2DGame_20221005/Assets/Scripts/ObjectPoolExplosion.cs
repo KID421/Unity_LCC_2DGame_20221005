@@ -3,11 +3,11 @@ using UnityEngine;
 namespace KID
 {
     /// <summary>
-    /// 子彈物件池
+    /// 爆炸物件池
     /// </summary>
-    public class ObjectPoolBullet : ObjectPoolBase
+    public class ObjectPoolExplosion : ObjectPoolBase
     {
-        public static ObjectPoolBullet instance;
+        public static ObjectPoolExplosion instance;
 
         protected override void Awake()
         {
