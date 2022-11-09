@@ -12,6 +12,12 @@ namespace KID
 
         private void Awake()
         {
+
+        }
+
+        // 當渲染物件進入攝影機 (Scene、Game) 時執行一次 (Renderer - Sprite Renderer、Mesh Renderer)
+        private void OnBecameVisible()
+        {
             // Invoke("呼叫方法"，延遲呼叫時間)
             // InvokeRepeating("呼叫方法"，延遲呼叫時間，重複呼叫頻率)
             InvokeRepeating("Fire", 0, intervalShoot);

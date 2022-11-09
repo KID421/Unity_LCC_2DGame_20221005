@@ -28,10 +28,18 @@ namespace KID
         {
             if (tag.Equals(tagToHurt))
             {
-                Destroy(gameObject);
                 GameObject tempExplo = ObjectPoolExplosion.instance.Get();
                 tempExplo.transform.position = transform.position;
+                Dead();
             }
+        }
+
+        /// <summary>
+        /// ¦º¤`
+        /// </summary>
+        protected virtual void Dead()
+        {
+            Destroy(gameObject);
         }
     }
 }

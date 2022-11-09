@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 736849221}
   - component: {fileID: 736849220}
   - component: {fileID: 2035376957461980020}
-  m_Layer: 0
+  - component: {fileID: 1498431563}
+  m_Layer: 6
   m_Name: "\u6575\u6A5F"
-  m_TagString: Untagged
+  m_TagString: "\u6575\u6A5F"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,4 +163,18 @@ MonoBehaviour:
   angleBullet: {x: 0, y: 180, z: 0}
   v2Force: {x: -100, y: 0}
   colorBullet: {r: 0.7169812, g: 0.47009614, b: 0.47009614, a: 1}
+  tagBullet: "\u6575\u6A5F"
   intervalShoot: 1
+--- !u!114 &1498431563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775123616036351612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e169954bdb6313b4ca7136b2591c9dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToHurt: "\u73A9\u5BB6"
